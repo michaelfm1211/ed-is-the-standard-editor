@@ -1,3 +1,5 @@
+PREFIX=/usr/local
+
 all: vi emacs
 
 vi:
@@ -9,8 +11,8 @@ emacs:
 
 .PHONY: install
 install:
-	cp vi /usr/local/bin
-	cp emacs /usr/local/bin
+	cp vi "${PREFIX}/bin"
+	cp emacs "${PREFIX}/bin"
 
 .PHONY: clean
 clean:
